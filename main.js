@@ -110,77 +110,47 @@ function updateFooterYear() {
 }
 
 /**
- * Initialize bottom bar hide on scroll (mobile only)
+ * Initialize bottom bar hide on touch for mobile
  */
-function initBottomBarScroll() {
+function initBottomBarTouch() {
+    // Only on mobile
+    if (window.innerWidth > 767) {
+        return;
+    }
+
     const bottomBar = document.querySelector('.bottom-bar');
     if (!bottomBar) {
         return;
     }
 
-    let scrollTimeout;
-    let lastScrollTop = 0;
-    let isScrolling = false;
-    let isTouchingBar = false;
-    const scrollThreshold = 5; // Minimum scroll distance to trigger hide
+    let ditosuschermo = 'inattiva';
 
-    function handleScroll() {
-        // Only hide on mobile
-        if (window.innerWidth > 767) {
-            return;
+    // Quando il dito tocca lo schermo
+    document.addEventListener('touchstart', () => {
+        // Controlla lo stato precedente
+        if (ditosuschermo === 'attiva') {
+            // Se era già attiva, nascondi la bottom bar
+            bottomBar.style.opacity = '0';
+            bottomBar.style.pointerEvents = 'none';
         }
-
-        // Don't hide if user is touching the bar
-        if (isTouchingBar) {
-            return;
-        }
-
-        const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        const scrollDelta = Math.abs(currentScrollTop - lastScrollTop);
-
-        if (scrollDelta > scrollThreshold) {
-            if (!isScrolling) {
-                isScrolling = true;
-                bottomBar.classList.add('bottom-bar--hidden');
-            }
-
-            // Clear existing timeout
-            clearTimeout(scrollTimeout);
-
-            // Show bar again after scroll stops
-            scrollTimeout = setTimeout(() => {
-                bottomBar.classList.remove('bottom-bar--hidden');
-                isScrolling = false;
-            }, 1000); // Show after 1 second of no scrolling
-        }
-
-        lastScrollTop = currentScrollTop;
-    }
-
-    // Prevent hiding when touching the bottom bar
-    bottomBar.addEventListener('touchstart', (e) => {
-        isTouchingBar = true;
-        bottomBar.classList.remove('bottom-bar--hidden');
-        clearTimeout(scrollTimeout);
+        // Imposta lo stato come attiva
+        ditosuschermo = 'attiva';
     }, { passive: true });
 
-    bottomBar.addEventListener('touchend', () => {
-        // Small delay to allow click events to fire
-        setTimeout(() => {
-            isTouchingBar = false;
-        }, 100);
+    // Quando il dito lascia lo schermo
+    document.addEventListener('touchend', () => {
+        // Imposta lo stato come inattiva
+        ditosuschermo = 'inattiva';
+        // Mostra di nuovo la bottom bar
+        bottomBar.style.opacity = '1';
+        bottomBar.style.pointerEvents = 'auto';
     }, { passive: true });
 
-    // Throttle scroll events for better performance
-    let ticking = false;
-    window.addEventListener('scroll', () => {
-        if (!ticking) {
-            window.requestAnimationFrame(() => {
-                handleScroll();
-                ticking = false;
-            });
-            ticking = true;
-        }
+    // Gestisci anche touchcancel (quando il touch viene interrotto)
+    document.addEventListener('touchcancel', () => {
+        ditosuschermo = 'inattiva';
+        bottomBar.style.opacity = '1';
+        bottomBar.style.pointerEvents = 'auto';
     }, { passive: true });
 }
 
@@ -191,7 +161,7 @@ function init() {
     initBurgerMenu();
     initLanguageDropdown();
     updateFooterYear();
-    initBottomBarScroll();
+    initBottomBarTouch();
 }
 
 // Run initialization when DOM is ready

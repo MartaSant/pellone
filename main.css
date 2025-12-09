@@ -667,16 +667,7 @@ a:hover {
     gap: 0.4rem;
     z-index: 998;
     backdrop-filter: blur(10px);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-/* Hide bottom bar on scroll (mobile only) */
-@media (max-width: 767px) {
-    .bottom-bar--hidden {
-        transform: translateX(-50%) translateY(calc(100% + 1rem));
-        opacity: 0;
-        pointer-events: none;
-    }
+    transition: opacity 0.2s ease, pointer-events 0s;
 }
 
 /* Stile base per tutti i bottoni */

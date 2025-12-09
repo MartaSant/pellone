@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Pizzeria [Nome] - Info & Contatti</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header with navigation and language switcher -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html" class="logo__link" aria-label="Homepage - Pizzeria [Nome]">
+                        <img
+                            src="assets/img/logo.webp"
+                            alt="Pizzeria [Nome] - dal 1960"
+                            class="logo__image"
+                            loading="lazy"
+                            width="160"
+                            height="60"
+                        />
+                    </a>
+                </div>
+
+                <!-- Burger button for mobile -->
+                <button class="burger-button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Desktop navigation and language switcher -->
+                <nav class="header-nav" id="header-nav" role="navigation">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                        <li><a href="menu.html" class="nav-link" data-i18n="nav.menu">Menù</a></li>
+                        <li><a href="story.html" class="nav-link" data-i18n="nav.story">Storia</a></li>
+                        <li><a href="awards.html" class="nav-link" data-i18n="nav.awards">Riconoscimenti</a></li>
+                        <li><a href="contacts.html" class="nav-link nav-link--active" data-i18n="nav.contacts" aria-current="page">Info & Contatti</a></li>
+                    </ul>
+
+                    <!-- Language switcher -->
+                    <div class="language-switcher" aria-label="Language switcher">
+                        <button
+                            class="language-switcher__toggle"
+                            type="button"
+                            aria-haspopup="listbox"
+                            aria-expanded="false"
+                        >
+                            <span class="language-switcher__current">IT</span>
+                            <span class="language-switcher__chevron" aria-hidden="true"></span>
+                        </button>
+
+                        <div class="language-switcher__menu" role="listbox">
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="it"
+                                role="option"
+                                aria-selected="true"
+                            >
+                                Italiano
+                            </button>
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="en"
+                                role="option"
+                                aria-selected="false"
+                            >
+                                English
+                            </button>
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="es"
+                                role="option"
+                                aria-selected="false"
+                            >
+                                Español
+                            </button>
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="fr"
+                                role="option"
+                                aria-selected="false"
+                            >
+                                Français
+                            </button>
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="de"
+                                role="option"
+                                aria-selected="false"
+                            >
+                                Deutsch
+                            </button>
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="ru"
+                                role="option"
+                                aria-selected="false"
+                            >
+                                Русский
+                            </button>
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="uk"
+                                role="option"
+                                aria-selected="false"
+                            >
+                                Українська
+                            </button>
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="pl"
+                                role="option"
+                                aria-selected="false"
+                            >
+                                Polski
+                            </button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile menu (visible when burger is clicked) -->
+    <nav class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <ul class="mobile-nav-list">
+            <li><a href="index.html" class="mobile-nav-link" data-i18n="nav.home">Home</a></li>
+            <li><a href="menu.html" class="mobile-nav-link" data-i18n="nav.menu">Menù</a></li>
+            <li><a href="story.html" class="mobile-nav-link" data-i18n="nav.story">Storia</a></li>
+            <li><a href="awards.html" class="mobile-nav-link" data-i18n="nav.awards">Riconoscimenti</a></li>
+            <li><a href="contacts.html" class="mobile-nav-link mobile-nav-link--active" data-i18n="nav.contacts" aria-current="page">Info & Contatti</a></li>
+        </ul>
+        <div class="mobile-language-switcher">
+            <div class="language-switcher" aria-label="Language switcher">
+                <button
+                    class="language-switcher__toggle"
+                    type="button"
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                >
+                    <span class="language-switcher__current">IT</span>
+                    <span class="language-switcher__chevron" aria-hidden="true"></span>
+                </button>
+
+                <div class="language-switcher__menu" role="listbox">
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="it"
+                        role="option"
+                        aria-selected="true"
+                    >
+                        Italiano
+                    </button>
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="en"
+                        role="option"
+                        aria-selected="false"
+                    >
+                        English
+                    </button>
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="es"
+                        role="option"
+                        aria-selected="false"
+                    >
+                        Español
+                    </button>
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="fr"
+                        role="option"
+                        aria-selected="false"
+                    >
+                        Français
+                    </button>
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="de"
+                        role="option"
+                        aria-selected="false"
+                    >
+                        Deutsch
+                    </button>
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="ru"
+                        role="option"
+                        aria-selected="false"
+                    >
+                        Русский
+                    </button>
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="uk"
+                        role="option"
+                        aria-selected="false"
+                    >
+                        Українська
+                    </button>
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="pl"
+                        role="option"
+                        aria-selected="false"
+                    >
+                        Polski
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content area -->
+    <main class="main-content" role="main">
+        <!-- Page hero -->
+        <section class="page-hero page-hero--contacts">
+            <div class="container page-hero__inner">
+                <p class="page-hero__eyebrow" data-i18n="contactsPage.eyebrow">
+                    Info & contatti
+                </p>
+                <h1 class="page-hero__title" data-i18n="contactsPage.heroTitle">
+                    Dove siamo e come raggiungerci
+                </h1>
+                <p class="page-hero__subtitle" data-i18n="contactsPage.heroSubtitle">
+                    Tutte le informazioni pratiche per arrivare in pizzeria, chiamarci e sapere quando siamo aperti.
+                </p>
+            </div>
+        </section>
+
+        <!-- Map + quick actions -->
+        <section class="contacts-section contacts-section--map">
+            <div class="container contacts-section__inner contacts-section__inner--map">
+                <div class="contacts-section__map-wrapper">
+                    <iframe
+                        class="contacts-section__map"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3028.1234567890123!2d14.2486!3d40.8518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDUxJzA2LjUiTiAxNMKwMTQnNTQuOSJF!5e0!3m2!1sit!2sit!4v1234567890123!5m2!1sit!2sit"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Mappa della pizzeria a Napoli"
+                    ></iframe>
+                </div>
+
+                <div class="contacts-section__map-details">
+                    <h2 class="contacts-section__title" data-i18n="contactsPage.mapTitle">
+                        Siamo nel cuore di [Quartiere]
+                    </h2>
+                    <p class="contacts-section__text" data-i18n="contactsPage.mapBody">
+                        La pizzeria si trova in Via [Indirizzo], nel quartiere [Quartiere] a Napoli.
+                        Una zona storica, facile da raggiungere con i mezzi pubblici e a pochi minuti a piedi
+                        dalle principali vie del centro.
+                    </p>
+
+                    <div class="contacts-section__actions">
+                        <a
+                            href="tel:+390000000000"
+                            class="btn btn--primary"
+                            data-i18n="actions.call"
+                        >
+                            Chiama ora
+                        </a>
+                        <a
+                            href="https://maps.google.com/?q=Pizzeria+[Nome]+Napoli"
+                            class="btn btn--ghost"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-i18n="actions.maps"
+                        >
+                            Apri in Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Opening hours -->
+        <section class="contacts-section contacts-section--hours">
+            <div class="container contacts-section__inner">
+                <div class="contacts-section__block">
+                    <h2 class="contacts-section__title" data-i18n="contactsPage.hoursTitle">
+                        Orari di apertura
+                    </h2>
+                    <p class="contacts-section__text" data-i18n="contactsPage.hoursIntro">
+                        Gli orari possono variare nei giorni festivi: controlla sempre i nostri social per eventuali aggiornamenti.
+                    </p>
+
+                    <dl class="opening-hours">
+                        <div class="opening-hours__row">
+                            <dt data-i18n="contactsPage.hoursWeekdays">Lunedì – Venerdì</dt>
+                            <dd data-i18n="contactsPage.hoursWeekdaysValue">
+                                12:00 – 15:00, 19:00 – 23:30
+                            </dd>
+                        </div>
+                        <div class="opening-hours__row">
+                            <dt data-i18n="contactsPage.hoursSaturday">Sabato</dt>
+                            <dd data-i18n="contactsPage.hoursSaturdayValue">
+                                12:00 – 15:00, 19:00 – 00:00
+                            </dd>
+                        </div>
+                        <div class="opening-hours__row">
+                            <dt data-i18n="contactsPage.hoursSunday">Domenica</dt>
+                            <dd data-i18n="contactsPage.hoursSundayValue">
+                                19:00 – 23:30
+                            </dd>
+                        </div>
+                        <div class="opening-hours__row">
+                            <dt data-i18n="contactsPage.hoursClosedDay">Giorno di chiusura</dt>
+                            <dd data-i18n="contactsPage.hoursClosedDayValue">
+                                [Giorno di chiusura settimanale]
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacts & social -->
+        <section class="contacts-section contacts-section--details">
+            <div class="container contacts-section__inner contacts-section__inner--two">
+                <div class="contacts-section__block">
+                    <h2 class="contacts-section__title" data-i18n="contactsPage.contactsTitle">
+                        Contatti
+                    </h2>
+                    <ul class="contacts-list">
+                        <li class="contacts-list__item">
+                            <span class="contacts-list__label" data-i18n="contactsPage.phoneLabel">
+                                Telefono
+                            </span>
+                            <a href="tel:+390000000000" class="contacts-list__value">
+                                +39 000 000 0000
+                            </a>
+                        </li>
+                        <li class="contacts-list__item">
+                            <span class="contacts-list__label" data-i18n="contactsPage.emailLabel">
+                                Email
+                            </span>
+                            <a href="mailto:info@pizzeriaexample.it" class="contacts-list__value">
+                                info@pizzeriaexample.it
+                            </a>
+                        </li>
+                        <li class="contacts-list__item">
+                            <span class="contacts-list__label" data-i18n="contactsPage.addressLabel">
+                                Indirizzo
+                            </span>
+                            <span class="contacts-list__value" data-i18n="contactsPage.addressValue">
+                                Via [Indirizzo], [Quartiere], Napoli.
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="contacts-section__block">
+                    <h2 class="contacts-section__title" data-i18n="contactsPage.socialTitle">
+                        Social & aggiornamenti
+                    </h2>
+                    <p class="contacts-section__text" data-i18n="contactsPage.socialIntro">
+                        Segui i nostri profili per aggiornamenti su orari speciali, chiusure straordinarie
+                        e novità dal forno.
+                    </p>
+                    <ul class="contacts-social">
+                        <li>
+                            <a href="#" class="contacts-social__link">Facebook</a>
+                        </li>
+                        <li>
+                            <a href="#" class="contacts-social__link">Instagram</a>
+                        </li>
+                        <li>
+                            <a href="#" class="contacts-social__link">Tripadvisor</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ / note about reservations -->
+        <section class="contacts-section contacts-section--faq">
+            <div class="container contacts-section__inner">
+                <div class="contacts-section__block">
+                    <h2 class="contacts-section__title" data-i18n="contactsPage.faqTitle">
+                        Prenotazioni
+                    </h2>
+                    <p class="contacts-section__text" data-i18n="contactsPage.faqBody">
+                        Al momento non accettiamo prenotazioni: la pizzeria funziona con arrivo diretto.
+                        Ti consigliamo di venire con un po' di anticipo nei giorni e negli orari di maggiore affluenza.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p class="footer-text" data-i18n="footer.rights">Tutti i diritti riservati.</p>
+            <p class="footer-year">&copy; <span id="current-year"></span> Pizzeria [Nome]</p>
+        </div>
+    </footer>
+
+    <!-- Bottom Bar -->
+    <div class="bottom-bar">
+        <a href="tel:+390000000000" class="bottom-bar-btn bottom-bar-btn--call" aria-label="Chiama" data-i18n="actions.call">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://maps.google.com/?q=Pizzeria+[Nome]+Napoli" class="bottom-bar-btn bottom-bar-btn--map" target="_blank" rel="noopener noreferrer" aria-label="Apri in Google Maps" data-i18n="actions.maps">
+            <i class="fas fa-location-dot"></i>
+        </a>
+        <a href="menu.html" class="bottom-bar-btn bottom-bar-btn--menu" aria-label="Vedi il menù" data-i18n="actions.menu">
+            <i class="fas fa-book-open"></i>
+        </a>
+        <a href="https://glovoapp.com/" class="bottom-bar-btn bottom-bar-btn--glovo" target="_blank" rel="noopener noreferrer" aria-label="Ordina su Glovo" data-i18n="actions.glovo">
+            <i class="fas fa-motorcycle"></i>
+        </a>
+    </div>
+
+    <!-- Load scripts at end of body -->
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+

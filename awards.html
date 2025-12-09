@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Pizzeria [Nome] - Riconoscimenti</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header with navigation and language switcher -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html" class="logo__link" aria-label="Homepage - Pizzeria [Nome]">
+                        <img
+                            src="assets/img/logo.webp"
+                            alt="Pizzeria [Nome] - dal 1960"
+                            class="logo__image"
+                            loading="lazy"
+                            width="160"
+                            height="60"
+                        />
+                    </a>
+                </div>
+
+                <!-- Burger button for mobile -->
+                <button class="burger-button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Desktop navigation and language switcher -->
+                <nav class="header-nav" id="header-nav" role="navigation">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                        <li><a href="menu.html" class="nav-link" data-i18n="nav.menu">Menù</a></li>
+                        <li><a href="story.html" class="nav-link" data-i18n="nav.story">Storia</a></li>
+                        <li><a href="awards.html" class="nav-link nav-link--active" data-i18n="nav.awards" aria-current="page">Riconoscimenti</a></li>
+                        <li><a href="contacts.html" class="nav-link" data-i18n="nav.contacts">Info & Contatti</a></li>
+                    </ul>
+
+                    <!-- Language switcher -->
+                    <div class="language-switcher" aria-label="Language switcher">
+                        <button
+                            class="language-switcher__toggle"
+                            type="button"
+                            aria-haspopup="listbox"
+                            aria-expanded="false"
+                        >
+                            <span class="language-switcher__current">IT</span>
+                            <span class="language-switcher__chevron" aria-hidden="true"></span>
+                        </button>
+
+                        <div class="language-switcher__menu" role="listbox">
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="it"
+                                role="option"
+                                aria-selected="true"
+                            >
+                                Italiano
+                            </button>
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="en"
+                                role="option"
+                                aria-selected="false"
+                            >
+                                English
+                            </button>
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="es"
+                                role="option"
+                                aria-selected="false"
+                            >
+                                Español
+                            </button>
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="fr"
+                                role="option"
+                                aria-selected="false"
+                            >
+                                Français
+                            </button>
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="de"
+                                role="option"
+                                aria-selected="false"
+                            >
+                                Deutsch
+                            </button>
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="ru"
+                                role="option"
+                                aria-selected="false"
+                            >
+                                Русский
+                            </button>
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="uk"
+                                role="option"
+                                aria-selected="false"
+                            >
+                                Українська
+                            </button>
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="pl"
+                                role="option"
+                                aria-selected="false"
+                            >
+                                Polski
+                            </button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile menu (visible when burger is clicked) -->
+    <nav class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <ul class="mobile-nav-list">
+            <li><a href="index.html" class="mobile-nav-link" data-i18n="nav.home">Home</a></li>
+            <li><a href="menu.html" class="mobile-nav-link" data-i18n="nav.menu">Menù</a></li>
+            <li><a href="story.html" class="mobile-nav-link" data-i18n="nav.story">Storia</a></li>
+            <li><a href="awards.html" class="mobile-nav-link mobile-nav-link--active" data-i18n="nav.awards" aria-current="page">Riconoscimenti</a></li>
+            <li><a href="contacts.html" class="mobile-nav-link" data-i18n="nav.contacts">Info & Contatti</a></li>
+        </ul>
+        <div class="mobile-language-switcher">
+            <div class="language-switcher" aria-label="Language switcher">
+                <button
+                    class="language-switcher__toggle"
+                    type="button"
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                >
+                    <span class="language-switcher__current">IT</span>
+                    <span class="language-switcher__chevron" aria-hidden="true"></span>
+                </button>
+
+                <div class="language-switcher__menu" role="listbox">
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="it"
+                        role="option"
+                        aria-selected="true"
+                    >
+                        Italiano
+                    </button>
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="en"
+                        role="option"
+                        aria-selected="false"
+                    >
+                        English
+                    </button>
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="es"
+                        role="option"
+                        aria-selected="false"
+                    >
+                        Español
+                    </button>
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="fr"
+                        role="option"
+                        aria-selected="false"
+                    >
+                        Français
+                    </button>
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="de"
+                        role="option"
+                        aria-selected="false"
+                    >
+                        Deutsch
+                    </button>
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="ru"
+                        role="option"
+                        aria-selected="false"
+                    >
+                        Русский
+                    </button>
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="uk"
+                        role="option"
+                        aria-selected="false"
+                    >
+                        Українська
+                    </button>
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="pl"
+                        role="option"
+                        aria-selected="false"
+                    >
+                        Polski
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content area -->
+    <main class="main-content" role="main">
+        <!-- Page hero -->
+        <section class="page-hero page-hero--awards">
+            <div class="container page-hero__inner">
+                <p class="page-hero__eyebrow" data-i18n="awardsPage.eyebrow">
+                    Premi & riconoscimenti
+                </p>
+                <h1 class="page-hero__title" data-i18n="awardsPage.heroTitle">
+                    Premi, guide e recensioni
+                </h1>
+                <p class="page-hero__subtitle" data-i18n="awardsPage.heroSubtitle">
+                    Una selezione dei riconoscimenti ricevuti nel tempo da guide gastronomiche, stampa
+                    e portali di viaggio.
+                </p>
+            </div>
+        </section>
+
+        <!-- Guides -->
+        <section class="awards-section awards-section--guides">
+            <div class="container">
+                <h2 class="awards-section__title" data-i18n="awardsPage.guidesTitle">
+                    Guide gastronomiche
+                </h2>
+
+                <div class="awards-section__grid">
+                    <article class="award-card">
+                        <header class="award-card__header">
+                            <h3 class="award-card__name" data-i18n="awardsPage.guides.item1.title">
+                                [Nome guida] – Selezione pizzerie Napoli
+                            </h3>
+                            <span class="award-card__year" data-i18n="awardsPage.guides.item1.year">
+                                Dal [Anno]
+                            </span>
+                        </header>
+                        <p class="award-card__description" data-i18n="awardsPage.guides.item1.description">
+                            Inserita tra le pizzerie consigliate a Napoli per la pizza napoletana tradizionale.
+                        </p>
+                    </article>
+
+                    <article class="award-card">
+                        <header class="award-card__header">
+                            <h3 class="award-card__name" data-i18n="awardsPage.guides.item2.title">
+                                [Altra guida] – Pizzerie storiche
+                            </h3>
+                            <span class="award-card__year" data-i18n="awardsPage.guides.item2.year">
+                                [Anno]
+                            </span>
+                        </header>
+                        <p class="award-card__description" data-i18n="awardsPage.guides.item2.description">
+                            Riconoscimento come pizzeria storica con forno a legna attivo dal 1960.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Press / magazines -->
+        <section class="awards-section awards-section--press">
+            <div class="container">
+                <h2 class="awards-section__title" data-i18n="awardsPage.pressTitle">
+                    Stampa e riviste
+                </h2>
+
+                <div class="awards-section__grid">
+                    <article class="award-card">
+                        <header class="award-card__header">
+                            <h3 class="award-card__name" data-i18n="awardsPage.press.item1.title">
+                                Articolo su [Nome giornale]
+                            </h3>
+                            <span class="award-card__year" data-i18n="awardsPage.press.item1.year">
+                                [Anno]
+                            </span>
+                        </header>
+                        <p class="award-card__description" data-i18n="awardsPage.press.item1.description">
+                            Articolo dedicato alle pizzerie di quartiere storiche di Napoli, con focus sulla
+                            nostra pizza cotta nel forno a legna.
+                        </p>
+                    </article>
+
+                    <article class="award-card">
+                        <header class="award-card__header">
+                            <h3 class="award-card__name" data-i18n="awardsPage.press.item2.title">
+                                Recensione su [Rivista gastronomica]
+                            </h3>
+                            <span class="award-card__year" data-i18n="awardsPage.press.item2.year">
+                                [Anno]
+                            </span>
+                        </header>
+                        <p class="award-card__description" data-i18n="awardsPage.press.item2.description">
+                            Recensione che sottolinea l'impasto tradizionale e l'atmosfera familiare della sala.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Online reviews -->
+        <section class="awards-section awards-section--online">
+            <div class="container">
+                <h2 class="awards-section__title" data-i18n="awardsPage.onlineTitle">
+                    Recensioni online
+                </h2>
+
+                <div class="awards-section__grid">
+                    <article class="award-card">
+                        <header class="award-card__header">
+                            <h3 class="award-card__name" data-i18n="awardsPage.online.item1.title">
+                                Punteggi su portali di viaggio
+                            </h3>
+                        </header>
+                        <p class="award-card__description" data-i18n="awardsPage.online.item1.description">
+                            Valutazioni positive su portali di viaggio e recensioni dei clienti che raccontano
+                            la pizza e l'accoglienza come "una tappa fissa a Napoli".
+                        </p>
+                    </article>
+
+                    <article class="award-card">
+                        <header class="award-card__header">
+                            <h3 class="award-card__name" data-i18n="awardsPage.online.item2.title">
+                                Premi della community
+                            </h3>
+                        </header>
+                        <p class="award-card__description" data-i18n="awardsPage.online.item2.description">
+                            Riconoscimenti basati sulle recensioni degli utenti per costanza nella qualità
+                            e fedeltà alla tradizione.
+                        </p>
+                    </article>
+                </div>
+
+                <p class="awards-section__note" data-i18n="awardsPage.note">
+                    I riferimenti a guide e articoli sono indicativi: saranno aggiornati in base
+                    ai riconoscimenti effettivi confermati dalla pizzeria.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p class="footer-text" data-i18n="footer.rights">Tutti i diritti riservati.</p>
+            <p class="footer-year">&copy; <span id="current-year"></span> Pizzeria [Nome]</p>
+        </div>
+    </footer>
+
+    <!-- Bottom Bar -->
+    <div class="bottom-bar">
+        <a href="tel:+390000000000" class="bottom-bar-btn bottom-bar-btn--call" aria-label="Chiama" data-i18n="actions.call">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://maps.google.com/?q=Pizzeria+[Nome]+Napoli" class="bottom-bar-btn bottom-bar-btn--map" target="_blank" rel="noopener noreferrer" aria-label="Apri in Google Maps" data-i18n="actions.maps">
+            <i class="fas fa-location-dot"></i>
+        </a>
+        <a href="menu.html" class="bottom-bar-btn bottom-bar-btn--menu" aria-label="Vedi il menù" data-i18n="actions.menu">
+            <i class="fas fa-book-open"></i>
+        </a>
+        <a href="https://glovoapp.com/" class="bottom-bar-btn bottom-bar-btn--glovo" target="_blank" rel="noopener noreferrer" aria-label="Ordina su Glovo" data-i18n="actions.glovo">
+            <i class="fas fa-motorcycle"></i>
+        </a>
+    </div>
+
+    <!-- Load scripts at end of body -->
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+

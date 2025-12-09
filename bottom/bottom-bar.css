@@ -1,0 +1,250 @@
+/* =========================
+   BOTTOM FIXED BAR (CTA)
+   ========================= */
+
+/* Container principale della barra */
+.bottom-bar {
+    position: fixed;
+    left: 50%;
+    bottom: calc(0.85rem + 29px);
+    bottom: calc(0.85rem + 29px + env(safe-area-inset-bottom)); /* safe area per iPhone con notch */
+    transform: translateX(-50%);
+    width: 90vw; /* 90% della larghezza del display */
+    max-width: calc(100vw - 2 * env(safe-area-inset-left)); /* safe area laterale */
+    background: rgba(0, 0, 0, 0.92);
+    border-radius: 999px;
+    border: 1px solid rgba(255, 201, 40, 0.6);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.85);
+    padding: 0.4rem 0.6rem;
+    padding-left: calc(0.6rem + env(safe-area-inset-left)); /* safe area laterale sinistra */
+    padding-right: calc(0.6rem + env(safe-area-inset-right)); /* safe area laterale destra */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.4rem;
+    z-index: 50;
+    backdrop-filter: blur(10px);
+}
+
+/* Stile base per tutti i bottoni */
+.bottom-bar-btn {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px; /* touch target minimo 44x44px per accessibilità */
+    height: 44px; /* touch target minimo 44x44px per accessibilità */
+    border-radius: 12px; /* piccoli quadrati con bordi tondi */
+    border: 1px solid transparent;
+    text-decoration: none;
+    transition: background 0.18s ease, color 0.18s ease, transform 0.15s ease, border-color 0.18s ease;
+    padding: 0;
+    touch-action: manipulation; /* migliora risposta touch */
+}
+
+/* Nasconde il testo, lasciando solo l'icona (utile per screen reader) */
+.bottom-bar-btn span {
+    display: none;
+}
+
+/* Dimensione icone */
+.bottom-bar-btn i {
+    font-size: 1.1rem;
+}
+
+/* =========================
+   STILI PERSONALIZZATI BOTTONI
+   Personalizza questi stili secondo le tue esigenze
+   ========================= */
+
+/* Esempio: Bottone 1 */
+.bottom-bar-btn--btn1 {
+    background-color: #25D366; /* Colore di sfondo */
+    color: #0b2917; /* Colore icona/testo */
+    border-color: #25D366; /* Colore bordo */
+}
+
+.bottom-bar-btn--btn1:hover {
+    filter: brightness(1.03); /* Leggero aumento luminosità al hover */
+}
+
+/* Esempio: Bottone 2 */
+.bottom-bar-btn--btn2 {
+    background: #E1306C; /* Colore di sfondo */
+    color: #ffffff; /* Colore icona/testo */
+    border-color: #E1306C; /* Colore bordo */
+}
+
+.bottom-bar-btn--btn2:hover {
+    filter: brightness(1.03);
+}
+
+/* Esempio: Bottone 3 */
+.bottom-bar-btn--btn3 {
+    background-color: #8B4513; /* Colore di sfondo */
+    color: #111111; /* Colore icona/testo */
+    border-color: #8B4513; /* Colore bordo */
+}
+
+.bottom-bar-btn--btn3:hover {
+    filter: brightness(1.03);
+}
+
+/* Esempio: Bottone con sfondo trasparente */
+.bottom-bar-btn--btn4 {
+    background-color: transparent;
+    color: #D4AF37; /* Colore icona */
+    border-color: rgba(255, 226, 122, 0.6); /* Bordo semi-trasparente */
+}
+
+.bottom-bar-btn--btn4:hover {
+    background-color: #8B4513; /* Sfondo al hover */
+    color: #111111;
+    border-color: #8B4513;
+}
+
+/* =========================
+   EFFETTI HOVER GLOBALI
+   ========================= */
+
+.bottom-bar-btn:hover {
+    transform: translateY(-1px); /* Leggero sollevamento al hover */
+}
+
+/* =========================
+   SPAZIO EXTRA IN FONDO ALLE PAGINE
+   Aggiungi questa regola alle tue pagine per evitare che la barra copra i contenuti
+   ========================= */
+
+/* Esempio per pagine home */
+.home-body .page {
+    padding-bottom: 4.6rem; /* Aumenta se necessario */
+}
+
+/* Esempio per pagine menu */
+.menu-body .menu-page {
+    padding-bottom: 7rem; /* Più spazio per le pagine menu */
+}
+
+/* =========================
+   ESEMPI DI COLORI PREDEFINITI
+   Puoi usare questi come riferimento o crearne di nuovi
+   ========================= */
+
+/* WhatsApp (verde) */
+.bottom-bar-btn--wa {
+    background-color: #25D366;
+    color: #0b2917;
+    border-color: #25D366;
+}
+
+.bottom-bar-btn--wa:hover {
+    filter: brightness(1.03);
+}
+
+/* Instagram (rosa) */
+.bottom-bar-btn--ig {
+    background: #E1306C;
+    color: #ffffff;
+    border-color: #E1306C;
+}
+
+.bottom-bar-btn--ig:hover {
+    filter: brightness(1.03);
+}
+
+/* Telefono (marrone) */
+.bottom-bar-btn--call {
+    background-color: #8B4513;
+    color: #111111;
+    border-color: #8B4513;
+}
+
+.bottom-bar-btn--call:hover {
+    filter: brightness(1.03);
+}
+
+/* Mappa (trasparente con bordo dorato) */
+.bottom-bar-btn--map {
+    background-color: transparent;
+    color: #D4AF37;
+    border-color: rgba(255, 226, 122, 0.6);
+}
+
+.bottom-bar-btn--map:hover {
+    background-color: #8B4513;
+    color: #111111;
+    border-color: #8B4513;
+}
+
+/* Email (blu) */
+.bottom-bar-btn--email {
+    background-color: #007bff;
+    color: #ffffff;
+    border-color: #007bff;
+}
+
+.bottom-bar-btn--email:hover {
+    filter: brightness(1.1);
+}
+
+/* Facebook (blu scuro) */
+.bottom-bar-btn--fb {
+    background-color: #1877F2;
+    color: #ffffff;
+    border-color: #1877F2;
+}
+
+.bottom-bar-btn--fb:hover {
+    filter: brightness(1.05);
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+/* Per schermi molto piccoli, riduci leggermente la dimensione */
+@media (max-width: 320px) {
+    .bottom-bar {
+        width: 95vw;
+        padding: 0.35rem 0.5rem;
+    }
+    
+    .bottom-bar-btn {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .bottom-bar-btn i {
+        font-size: 1rem;
+    }
+}
+
+/* Per schermi più grandi, puoi aumentare le dimensioni */
+@media (min-width: 768px) {
+    .bottom-bar {
+        max-width: 500px; /* Limita la larghezza su schermi grandi */
+    }
+}
+
+/* =========================
+   ACCESSIBILITÀ
+   ========================= */
+
+/* Focus visibile per accessibilità tastiera */
+.bottom-bar-btn:focus {
+    outline: 2px solid rgba(255, 201, 40, 0.8);
+    outline-offset: 2px;
+}
+
+/* Riduzione movimento per utenti che preferiscono meno animazioni */
+@media (prefers-reduced-motion: reduce) {
+    .bottom-bar-btn {
+        transition: none;
+    }
+    
+    .bottom-bar-btn:hover {
+        transform: none;
+    }
+}
+

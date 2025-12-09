@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Pizzeria [Nome] - Home</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header with navigation and language switcher -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html" class="logo__link" aria-label="Homepage - Pizzeria [Nome]">
+                        <img
+                            src="assets/img/logo.webp"
+                            alt="Pizzeria [Nome] - dal 1960"
+                            class="logo__image"
+                            loading="lazy"
+                            width="160"
+                            height="60"
+                        />
+                    </a>
+                </div>
+
+                <!-- Burger button for mobile -->
+                <button class="burger-button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Desktop navigation and language switcher -->
+                <nav class="header-nav" id="header-nav" role="navigation">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link nav-link--active" data-i18n="nav.home" aria-current="page">Home</a></li>
+                        <li><a href="menu.html" class="nav-link" data-i18n="nav.menu">Menù</a></li>
+                        <li><a href="story.html" class="nav-link" data-i18n="nav.story">Storia</a></li>
+                        <li><a href="awards.html" class="nav-link" data-i18n="nav.awards">Riconoscimenti</a></li>
+                        <li><a href="contacts.html" class="nav-link" data-i18n="nav.contacts">Info & Contatti</a></li>
+                    </ul>
+
+                    <!-- Language switcher -->
+                    <div class="language-switcher" aria-label="Language switcher">
+                        <button
+                            class="language-switcher__toggle"
+                            type="button"
+                            aria-haspopup="listbox"
+                            aria-expanded="false"
+                        >
+                            <span class="language-switcher__current">IT</span>
+                            <span class="language-switcher__chevron" aria-hidden="true"></span>
+                        </button>
+
+                        <div class="language-switcher__menu" role="listbox">
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="it"
+                                role="option"
+                                aria-selected="true"
+                            >
+                                Italiano
+                            </button>
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="en"
+                                role="option"
+                                aria-selected="false"
+                            >
+                                English
+                            </button>
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="es"
+                                role="option"
+                                aria-selected="false"
+                            >
+                                Español
+                            </button>
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="fr"
+                                role="option"
+                                aria-selected="false"
+                            >
+                                Français
+                            </button>
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="de"
+                                role="option"
+                                aria-selected="false"
+                            >
+                                Deutsch
+                            </button>
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="ru"
+                                role="option"
+                                aria-selected="false"
+                            >
+                                Русский
+                            </button>
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="uk"
+                                role="option"
+                                aria-selected="false"
+                            >
+                                Українська
+                            </button>
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="pl"
+                                role="option"
+                                aria-selected="false"
+                            >
+                                Polski
+                            </button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile menu (visible when burger is clicked) -->
+    <nav class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <ul class="mobile-nav-list">
+            <li><a href="index.html" class="mobile-nav-link mobile-nav-link--active" data-i18n="nav.home" aria-current="page">Home</a></li>
+            <li><a href="menu.html" class="mobile-nav-link" data-i18n="nav.menu">Menù</a></li>
+            <li><a href="story.html" class="mobile-nav-link" data-i18n="nav.story">Storia</a></li>
+            <li><a href="awards.html" class="mobile-nav-link" data-i18n="nav.awards">Riconoscimenti</a></li>
+            <li><a href="contacts.html" class="mobile-nav-link" data-i18n="nav.contacts">Info & Contatti</a></li>
+        </ul>
+        <div class="mobile-language-switcher">
+            <div class="language-switcher" aria-label="Language switcher">
+                <button
+                    class="language-switcher__toggle"
+                    type="button"
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                >
+                    <span class="language-switcher__current">IT</span>
+                    <span class="language-switcher__chevron" aria-hidden="true"></span>
+                </button>
+
+                <div class="language-switcher__menu" role="listbox">
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="it"
+                        role="option"
+                        aria-selected="true"
+                    >
+                        Italiano
+                    </button>
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="en"
+                        role="option"
+                        aria-selected="false"
+                    >
+                        English
+                    </button>
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="es"
+                        role="option"
+                        aria-selected="false"
+                    >
+                        Español
+                    </button>
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="fr"
+                        role="option"
+                        aria-selected="false"
+                    >
+                        Français
+                    </button>
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="de"
+                        role="option"
+                        aria-selected="false"
+                    >
+                        Deutsch
+                    </button>
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="ru"
+                        role="option"
+                        aria-selected="false"
+                    >
+                        Русский
+                    </button>
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="uk"
+                        role="option"
+                        aria-selected="false"
+                    >
+                        Українська
+                    </button>
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="pl"
+                        role="option"
+                        aria-selected="false"
+                    >
+                        Polski
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content area -->
+    <main class="main-content" role="main">
+        <!-- Hero section -->
+        <section class="hero" id="hero">
+            <div class="container hero__inner">
+                    <div class="hero__content">
+                        <p class="hero__eyebrow" data-i18n="hero.eyebrow">
+                            Pizzeria storica a Napoli
+                        </p>
+
+                        <h1 class="hero__title" data-i18n="hero.title">
+                            La pizza napoletana di famiglia, dal 1960.
+                        </h1>
+
+                        <p class="hero__subtitle" data-i18n="hero.subtitle">
+                            Nel cuore di [Quartiere di Napoli], forno a legna e impasto tradizionale.
+                        </p>
+
+                        <p class="hero__badge" data-i18n="hero.badge">
+                            Gestita dai 3 fratelli [Cognome].
+                        </p>
+
+                        <div class="hero__actions">
+                            <a
+                                href="tel:+390000000000"
+                                class="btn btn--primary"
+                                data-i18n="actions.call"
+                            >
+                                Chiama ora
+                            </a>
+                            <a
+                                href="https://maps.google.com/?q=Pizzeria+[Nome]+Napoli"
+                                class="btn btn--ghost"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                data-i18n="actions.maps"
+                            >
+                                Apri in Google Maps
+                            </a>
+                            <a
+                                href="menu.html"
+                                class="btn btn--ghost"
+                                data-i18n="actions.menu"
+                            >
+                                Sfoglia il menù
+                            </a>
+                        </div>
+
+                        <p class="hero__note" data-i18n="hero.note">
+                            Non accettiamo prenotazioni – vi aspettiamo direttamente in pizzeria.
+                        </p>
+                    </div>
+
+                    <div class="hero__media">
+                        <img
+                            src="assets/img/hero.png"
+                            alt="Pizzeria storica napoletana"
+                            class="hero__image"
+                            loading="eager"
+                        />
+                    </div>
+                </div>
+        </section>
+
+        <!-- Quick info section -->
+        <section class="quick-info" aria-labelledby="quick-info-title">
+            <div class="container">
+                    <h2 class="section-title" id="quick-info-title" data-i18n="quick.sectionTitle">
+                        Info rapide
+                    </h2>
+
+                    <div class="quick-info__grid">
+                        <!-- Card 1: Today open/closed -->
+                        <article class="quick-info__card">
+                            <h3 class="quick-info__card-title" data-i18n="quick.today">
+                                Oggi siamo
+                            </h3>
+                            <p class="quick-info__status quick-info__status--open" data-i18n="quick.statusOpen">
+                                Aperti
+                            </p>
+                            <p class="quick-info__text" data-i18n="quick.hoursLabel">
+                                Orari di oggi: 12:00 – 15:00, 19:00 – 23:30
+                            </p>
+                        </article>
+
+                        <!-- Card 2: Address -->
+                        <article class="quick-info__card">
+                            <h3 class="quick-info__card-title" data-i18n="quick.addressTitle">
+                                Indirizzo
+                            </h3>
+                            <p class="quick-info__text" data-i18n="quick.addressLabel">
+                                Via [Indirizzo], [Quartiere], Napoli.
+                            </p>
+                            <a
+                                href="https://maps.google.com/?q=Pizzeria+[Nome]+Napoli"
+                                class="quick-info__link"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                data-i18n="actions.maps"
+                            >
+                                Apri in Google Maps
+                            </a>
+                        </article>
+
+                        <!-- Card 3: Reservations note -->
+                        <article class="quick-info__card">
+                            <p class="quick-info__text" data-i18n="quick.reservationsNote">
+                                Non accettiamo prenotazioni – vi aspettiamo direttamente in pizzeria.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Story preview section -->
+        <section class="story-preview" id="story-preview">
+            <div class="container story-preview__inner">
+                <div class="story-preview__media">
+                    <div class="story-preview__photo story-preview__photo--old">
+                        <span class="story-preview__photo-label" data-i18n="storyPreview.oldPhotoLabel">
+                            Foto storica del locale negli anni '60
+                        </span>
+                    </div>
+                    <div class="story-preview__photo story-preview__photo--today">
+                        <span class="story-preview__photo-label" data-i18n="storyPreview.todayPhotoLabel">
+                            Foto attuale dei tre fratelli in pizzeria
+                        </span>
+                    </div>
+                </div>
+
+                <div class="story-preview__content">
+                    <h2 class="section-title" data-i18n="storyPreview.title">
+                        Dal 1960: la nostra storia
+                    </h2>
+
+                    <p class="story-preview__text" data-i18n="storyPreview.body">
+                        Dal forno a legna acceso nel 1960 a oggi, la pizzeria è rimasta un punto di riferimento
+                        per chi cerca una pizza napoletana fatta come una volta, con lo stesso impasto tramandato
+                        in famiglia.
+                    </p>
+
+                    <a href="story.html" class="link-chevron" data-i18n="storyPreview.link">
+                        Scopri la storia completa
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pizzas highlight section -->
+        <section class="pizzas-highlight" id="pizzas">
+            <div class="container">
+                <header class="pizzas-highlight__header">
+                    <h2 class="section-title" data-i18n="pizzasHighlight.title">
+                        Le nostre pizze
+                    </h2>
+                    <p class="pizzas-highlight__subtitle" data-i18n="pizzasHighlight.subtitle">
+                        Una selezione delle pizze più richieste, tutte con impasto tradizionale napoletano
+                        e cottura nel forno a legna.
+                    </p>
+                </header>
+
+                <div class="pizzas-highlight__grid">
+                    <!-- Pizza 1 -->
+                    <article class="pizza-card">
+                        <div class="pizza-card__image-placeholder">
+                            <span class="pizza-card__image-label" data-i18n="pizzasHighlight.imagePlaceholder">
+                                Foto della pizza
+                            </span>
+                        </div>
+                        <div class="pizza-card__body">
+                            <h3 class="pizza-card__name">
+                                Margherita
+                            </h3>
+                            <p class="pizza-card__description" data-i18n="pizzasHighlight.margheritaDescription">
+                                Pomodoro, fior di latte, basilico fresco e olio extravergine.
+                            </p>
+                            <span class="pizza-card__tag" data-i18n="pizzasHighlight.bestSeller">
+                                La più richiesta
+                            </span>
+                        </div>
+                    </article>
+
+                    <!-- Pizza 2 -->
+                    <article class="pizza-card">
+                        <div class="pizza-card__image-placeholder">
+                            <span class="pizza-card__image-label" data-i18n="pizzasHighlight.imagePlaceholder">
+                                Foto della pizza
+                            </span>
+                        </div>
+                        <div class="pizza-card__body">
+                            <h3 class="pizza-card__name">
+                                Marinara
+                            </h3>
+                            <p class="pizza-card__description" data-i18n="pizzasHighlight.marinaraDescription">
+                                Pomodoro, aglio, origano, olio extravergine.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Pizza 3 -->
+                    <article class="pizza-card">
+                        <div class="pizza-card__image-placeholder">
+                            <span class="pizza-card__image-label" data-i18n="pizzasHighlight.imagePlaceholder">
+                                Foto della pizza
+                            </span>
+                        </div>
+                        <div class="pizza-card__body">
+                            <h3 class="pizza-card__name">
+                                Diavola
+                            </h3>
+                            <p class="pizza-card__description" data-i18n="pizzasHighlight.diavolaDescription">
+                                Pomodoro, fior di latte e salame piccante.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Pizza 4 -->
+                    <article class="pizza-card">
+                        <div class="pizza-card__image-placeholder">
+                            <span class="pizza-card__image-label" data-i18n="pizzasHighlight.imagePlaceholder">
+                                Foto della pizza
+                            </span>
+                        </div>
+                        <div class="pizza-card__body">
+                            <h3 class="pizza-card__name">
+                                Quattro Stagioni
+                            </h3>
+                            <p class="pizza-card__description" data-i18n="pizzasHighlight.quattroStagioniDescription">
+                                Pomodoro, fior di latte e selezione di ingredienti di stagione.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="pizzas-highlight__cta">
+                    <a
+                        href="menu.html"
+                        class="btn btn--primary"
+                        data-i18n="pizzasHighlight.cta"
+                    >
+                        Vedi il menù completo
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Glovo delivery section -->
+        <section class="delivery-glovo" id="glovo">
+            <div class="container delivery-glovo__inner">
+                <div class="delivery-glovo__content">
+                    <h2 class="section-title" data-i18n="glovoSection.title">
+                        Asporto con Glovo
+                    </h2>
+
+                    <p class="delivery-glovo__text" data-i18n="glovoSection.body">
+                        Vuoi gustare la nostra pizza a casa o in hotel? Per l'asporto ci appoggiamo a Glovo:
+                        scegli la pizzeria nell'app, ordina e attendi la consegna dove preferisci.
+                    </p>
+
+                    <p class="delivery-glovo__note" data-i18n="glovoSection.note">
+                        Consegna gestita da Glovo. Orari e zone servite possono variare in base alla piattaforma.
+                    </p>
+
+                    <div class="delivery-glovo__actions">
+                        <a
+                            href="https://glovoapp.com/"
+                            class="btn btn--primary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            data-i18n="actions.glovo"
+                        >
+                            Ordina su Glovo
+                        </a>
+                        <p class="delivery-glovo__hint" data-i18n="glovoSection.hint">
+                            Cerca il nome della pizzeria all'interno dell'app o del sito Glovo.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="delivery-glovo__media">
+                    <div class="delivery-glovo__logo-placeholder">
+                        <span class="delivery-glovo__logo-label" data-i18n="glovoSection.logoLabel">
+                            Spazio per il logo/icone Glovo
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Awards preview section -->
+        <section class="awards-preview" id="awards">
+            <div class="container">
+                <header class="awards-preview__header">
+                    <h2 class="section-title" data-i18n="awardsPreview.title">
+                        Premi & riconoscimenti
+                    </h2>
+                    <p class="awards-preview__subtitle" data-i18n="awardsPreview.subtitle">
+                        Negli anni la nostra pizzeria è stata segnalata da guide, giornali e siti di viaggio
+                        come uno dei punti fermi per la pizza napoletana tradizionale.
+                    </p>
+                </header>
+
+                <div class="awards-preview__logos" aria-label="Selezione di guide e riconoscimenti">
+                    <!-- Logo 1 -->
+                    <div class="award-logo">
+                        <span class="award-logo__placeholder" data-i18n="awardsPreview.logoGuide">
+                            Logo guida gastronomica
+                        </span>
+                    </div>
+
+                    <!-- Logo 2 -->
+                    <div class="award-logo">
+                        <span class="award-logo__placeholder" data-i18n="awardsPreview.logoMagazine">
+                            Logo rivista o giornale
+                        </span>
+                    </div>
+
+                    <!-- Logo 3 -->
+                    <div class="award-logo">
+                        <span class="award-logo__placeholder" data-i18n="awardsPreview.logoTravel">
+                            Logo sito di viaggi
+                        </span>
+                    </div>
+
+                    <!-- Logo 4 -->
+                    <div class="award-logo">
+                        <span class="award-logo__placeholder" data-i18n="awardsPreview.logoCommunity">
+                            Logo premi community
+                        </span>
+                    </div>
+                </div>
+
+                <blockquote class="awards-preview__quote" data-i18n="awardsPreview.quote">
+                    «Una delle migliori pizzerie di Napoli secondo [nome guida].»
+                </blockquote>
+
+                <div class="awards-preview__cta">
+                    <a href="awards.html" class="link-chevron" data-i18n="awardsPreview.link">
+                        Vedi tutti i riconoscimenti
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location & Contacts section -->
+        <section class="location-home" id="contacts">
+            <div class="location-home__map-wrapper">
+                <!-- Placeholder Google Maps iframe -->
+                <iframe
+                    class="location-home__map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3028.1234567890123!2d14.2486!3d40.8518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDUxJzA2LjUiTiAxNMKwMTQnNTQuOSJF!5e0!3m2!1sit!2sit!4v1234567890123!5m2!1sit!2sit"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Mappa della pizzeria a Napoli"
+                ></iframe>
+            </div>
+
+            <div class="location-home__content">
+                <div class="container location-home__inner">
+                    <div class="location-home__details">
+                        <h2 class="section-title" data-i18n="contactsHome.title">
+                            Dove siamo & contatti
+                        </h2>
+
+                        <p class="location-home__address" data-i18n="contactsHome.address">
+                            Via [Indirizzo], [Quartiere], Napoli.
+                        </p>
+
+                        <p class="location-home__phone">
+                            <span data-i18n="contactsHome.phoneLabel">Telefono:</span>
+                            <a href="tel:+390000000000" class="location-home__phone-link">
+                                +39 000 000 0000
+                            </a>
+                        </p>
+
+                        <p class="location-home__hours" data-i18n="contactsHome.hours">
+                            Orari di apertura: 12:00 – 15:00, 19:00 – 23:30 (chiuso il [giorno di chiusura]).
+                        </p>
+
+                        <p class="location-home__note" data-i18n="contactsHome.note">
+                            Non accettiamo prenotazioni: vi aspettiamo direttamente in pizzeria.
+                        </p>
+
+                        <div class="location-home__actions">
+                            <a
+                                href="tel:+390000000000"
+                                class="btn btn--primary"
+                                data-i18n="actions.call"
+                            >
+                                Chiama ora
+                            </a>
+                            <a
+                                href="https://maps.google.com/?q=Pizzeria+[Nome]+Napoli"
+                                class="btn btn--ghost"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                data-i18n="actions.maps"
+                            >
+                                Apri in Google Maps
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="location-home__extra">
+                        <h3 class="location-home__extra-title" data-i18n="contactsHome.socialTitle">
+                            Seguici sui social
+                        </h3>
+                        <ul class="location-home__social-list">
+                            <li>
+                                <a href="#" class="location-home__social-link">
+                                    <span class="location-home__social-label">Facebook</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="location-home__social-link">
+                                    <span class="location-home__social-label">Instagram</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="location-home__social-link">
+                                    <span class="location-home__social-label">Tripadvisor</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TODO: Glovo section will go here -->
+        <section class="glovo-section" id="glovo-section">
+            <div class="container">
+                <h2 data-i18n="page.home.glovo.title">Ordina Online</h2>
+                <p data-i18n="page.home.glovo.text">Placeholder text for Glovo section.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p class="footer-text" data-i18n="footer.rights">Tutti i diritti riservati.</p>
+            <p class="footer-year">&copy; <span id="current-year"></span> Pizzeria [Nome]</p>
+        </div>
+    </footer>
+
+    <!-- Mobile bottom bar (visible only on mobile) -->
+    <!-- Bottom Bar -->
+    <div class="bottom-bar">
+        <a href="tel:+390000000000" class="bottom-bar-btn bottom-bar-btn--call" aria-label="Chiama" data-i18n="actions.call">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://maps.google.com/?q=Pizzeria+[Nome]+Napoli" class="bottom-bar-btn bottom-bar-btn--map" target="_blank" rel="noopener noreferrer" aria-label="Apri in Google Maps" data-i18n="actions.maps">
+            <i class="fas fa-location-dot"></i>
+        </a>
+        <a href="menu.html" class="bottom-bar-btn bottom-bar-btn--menu" aria-label="Vedi il menù" data-i18n="actions.menu">
+            <i class="fas fa-book-open"></i>
+        </a>
+        <a href="https://glovoapp.com/" class="bottom-bar-btn bottom-bar-btn--glovo" target="_blank" rel="noopener noreferrer" aria-label="Ordina su Glovo" data-i18n="actions.glovo">
+            <i class="fas fa-motorcycle"></i>
+        </a>
+    </div>
+
+    <!-- Load scripts at end of body -->
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Pizzeria [Nome] - Storia</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header with navigation and language switcher -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html" class="logo__link" aria-label="Homepage - Pizzeria [Nome]">
+                        <img
+                            src="assets/img/logo.webp"
+                            alt="Pizzeria [Nome] - dal 1960"
+                            class="logo__image"
+                            loading="lazy"
+                            width="160"
+                            height="60"
+                        />
+                    </a>
+                </div>
+
+                <!-- Burger button for mobile -->
+                <button class="burger-button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <!-- Desktop navigation and language switcher -->
+                <nav class="header-nav" id="header-nav" role="navigation">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link" data-i18n="nav.home">Home</a></li>
+                        <li><a href="menu.html" class="nav-link" data-i18n="nav.menu">Menù</a></li>
+                        <li><a href="story.html" class="nav-link nav-link--active" data-i18n="nav.story" aria-current="page">Storia</a></li>
+                        <li><a href="awards.html" class="nav-link" data-i18n="nav.awards">Riconoscimenti</a></li>
+                        <li><a href="contacts.html" class="nav-link" data-i18n="nav.contacts">Info & Contatti</a></li>
+                    </ul>
+
+                    <!-- Language switcher -->
+                    <div class="language-switcher" aria-label="Language switcher">
+                        <button
+                            class="language-switcher__toggle"
+                            type="button"
+                            aria-haspopup="listbox"
+                            aria-expanded="false"
+                        >
+                            <span class="language-switcher__current">IT</span>
+                            <span class="language-switcher__chevron" aria-hidden="true"></span>
+                        </button>
+
+                        <div class="language-switcher__menu" role="listbox">
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="it"
+                                role="option"
+                                aria-selected="true"
+                            >
+                                Italiano
+                            </button>
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="en"
+                                role="option"
+                                aria-selected="false"
+                            >
+                                English
+                            </button>
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="es"
+                                role="option"
+                                aria-selected="false"
+                            >
+                                Español
+                            </button>
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="fr"
+                                role="option"
+                                aria-selected="false"
+                            >
+                                Français
+                            </button>
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="de"
+                                role="option"
+                                aria-selected="false"
+                            >
+                                Deutsch
+                            </button>
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="ru"
+                                role="option"
+                                aria-selected="false"
+                            >
+                                Русский
+                            </button>
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="uk"
+                                role="option"
+                                aria-selected="false"
+                            >
+                                Українська
+                            </button>
+                            <button
+                                type="button"
+                                class="language-option"
+                                data-lang="pl"
+                                role="option"
+                                aria-selected="false"
+                            >
+                                Polski
+                            </button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile menu (visible when burger is clicked) -->
+    <nav class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <ul class="mobile-nav-list">
+            <li><a href="index.html" class="mobile-nav-link" data-i18n="nav.home">Home</a></li>
+            <li><a href="menu.html" class="mobile-nav-link" data-i18n="nav.menu">Menù</a></li>
+            <li><a href="story.html" class="mobile-nav-link mobile-nav-link--active" data-i18n="nav.story" aria-current="page">Storia</a></li>
+            <li><a href="awards.html" class="mobile-nav-link" data-i18n="nav.awards">Riconoscimenti</a></li>
+            <li><a href="contacts.html" class="mobile-nav-link" data-i18n="nav.contacts">Info & Contatti</a></li>
+        </ul>
+        <div class="mobile-language-switcher">
+            <div class="language-switcher" aria-label="Language switcher">
+                <button
+                    class="language-switcher__toggle"
+                    type="button"
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                >
+                    <span class="language-switcher__current">IT</span>
+                    <span class="language-switcher__chevron" aria-hidden="true"></span>
+                </button>
+
+                <div class="language-switcher__menu" role="listbox">
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="it"
+                        role="option"
+                        aria-selected="true"
+                    >
+                        Italiano
+                    </button>
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="en"
+                        role="option"
+                        aria-selected="false"
+                    >
+                        English
+                    </button>
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="es"
+                        role="option"
+                        aria-selected="false"
+                    >
+                        Español
+                    </button>
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="fr"
+                        role="option"
+                        aria-selected="false"
+                    >
+                        Français
+                    </button>
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="de"
+                        role="option"
+                        aria-selected="false"
+                    >
+                        Deutsch
+                    </button>
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="ru"
+                        role="option"
+                        aria-selected="false"
+                    >
+                        Русский
+                    </button>
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="uk"
+                        role="option"
+                        aria-selected="false"
+                    >
+                        Українська
+                    </button>
+                    <button
+                        type="button"
+                        class="language-option"
+                        data-lang="pl"
+                        role="option"
+                        aria-selected="false"
+                    >
+                        Polski
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content area -->
+    <main class="main-content" role="main">
+        <!-- Page hero -->
+        <section class="page-hero page-hero--story">
+            <div class="container page-hero__inner">
+                <p class="page-hero__eyebrow" data-i18n="storyPage.eyebrow">
+                    Pizzeria storica a Napoli
+                </p>
+                <h1 class="page-hero__title" data-i18n="storyPage.heroTitle">
+                    Dal 1960: la nostra storia
+                </h1>
+                <p class="page-hero__subtitle" data-i18n="storyPage.heroSubtitle">
+                    Una pizzeria di quartiere diventata un punto di riferimento per chi ama la vera pizza napoletana.
+                </p>
+            </div>
+        </section>
+
+        <!-- Story section: Tradition -->
+        <section class="story-section story-section--tradition">
+            <div class="container story-section__inner">
+                <div class="story-section__text">
+                    <h2 class="story-section__title" data-i18n="storyPage.traditionTitle">
+                        Forno a legna e impasto tradizionale
+                    </h2>
+                    <p class="story-section__paragraph" data-i18n="storyPage.traditionBody1">
+                        Tutto inizia nel 1960, quando [Nome Fondatore] apre una piccola pizzeria di quartiere,
+                        con un solo forno a legna e poche pizze in carta. L'impasto è semplice, fatto a mano,
+                        con la stessa ricetta che la famiglia continua a tramandare ancora oggi.
+                    </p>
+                    <p class="story-section__paragraph" data-i18n="storyPage.traditionBody2">
+                        Nel tempo il locale cresce, ma la filosofia resta la stessa: pochi ingredienti scelti,
+                        cottura veloce nel forno a legna e una pizza che profuma di Napoli autentica.
+                    </p>
+                </div>
+
+                <div class="story-section__media">
+                    <div class="story-section__photo story-section__photo--old">
+                        <img
+                            src="assets/img/forno.jpg"
+                            alt="Forno a legna della pizzeria"
+                            class="story-section__photo-image"
+                            loading="lazy"
+                        />
+                        <span class="story-section__photo-label" data-i18n="storyPage.traditionPhotoLabel">
+                            Una delle prime foto della pizzeria negli anni '60.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story section: Family -->
+        <section class="story-section story-section--family">
+            <div class="container story-section__inner story-section__inner--reversed">
+                <div class="story-section__media">
+                    <div class="story-section__photo story-section__photo--family">
+                        <span class="story-section__photo-label" data-i18n="storyPage.familyPhotoLabel">
+                            I tre fratelli [Cognome] oggi al banco della pizzeria.
+                        </span>
+                    </div>
+                </div>
+
+                <div class="story-section__text">
+                    <h2 class="story-section__title" data-i18n="storyPage.familyTitle">
+                        Tre fratelli, un'unica pizzeria
+                    </h2>
+                    <p class="story-section__paragraph" data-i18n="storyPage.familyBody1">
+                        Oggi la pizzeria è gestita dai tre fratelli [Cognome], che sono cresciuti tra il banco,
+                        il forno e i tavoli del locale. Ognuno porta il proprio carattere, ma tutti condividono
+                        la stessa idea di ospitalità semplice e calorosa.
+                    </p>
+                    <p class="story-section__paragraph" data-i18n="storyPage.familyBody2">
+                        La sala è ancora quella di una volta, con poche concessioni alla modernità, perché
+                        la vera protagonista deve restare la pizza: sottile, morbida e con il cornicione
+                        che si scioglie in bocca.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story section: Today -->
+        <section class="story-section story-section--today">
+            <div class="container story-section__inner">
+                <div class="story-section__text">
+                    <h2 class="story-section__title" data-i18n="storyPage.todayTitle">
+                        Oggi come ieri
+                    </h2>
+                    <p class="story-section__paragraph" data-i18n="storyPage.todayBody1">
+                        Tra clienti del quartiere, napoletani che tornano ogni settimana e visitatori da tutto
+                        il mondo, la pizzeria è diventata una tappa fissa per chi cerca un'esperienza autentica.
+                    </p>
+                    <p class="story-section__paragraph" data-i18n="storyPage.todayBody2">
+                        Non ci sono impasti "2.0" o mode del momento: solo la pizza napoletana tradizionale,
+                        cotta nel forno a legna come nel 1960, con il sorriso di chi la prepara da una vita.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <p class="footer-text" data-i18n="footer.rights">Tutti i diritti riservati.</p>
+            <p class="footer-year">&copy; <span id="current-year"></span> Pizzeria [Nome]</p>
+        </div>
+    </footer>
+
+    <!-- Bottom Bar -->
+    <div class="bottom-bar">
+        <a href="tel:+390000000000" class="bottom-bar-btn bottom-bar-btn--call" aria-label="Chiama" data-i18n="actions.call">
+            <i class="fas fa-phone"></i>
+        </a>
+        <a href="https://maps.google.com/?q=Pizzeria+[Nome]+Napoli" class="bottom-bar-btn bottom-bar-btn--map" target="_blank" rel="noopener noreferrer" aria-label="Apri in Google Maps" data-i18n="actions.maps">
+            <i class="fas fa-location-dot"></i>
+        </a>
+        <a href="menu.html" class="bottom-bar-btn bottom-bar-btn--menu" aria-label="Vedi il menù" data-i18n="actions.menu">
+            <i class="fas fa-book-open"></i>
+        </a>
+        <a href="https://glovoapp.com/" class="bottom-bar-btn bottom-bar-btn--glovo" target="_blank" rel="noopener noreferrer" aria-label="Ordina su Glovo" data-i18n="actions.glovo">
+            <i class="fas fa-motorcycle"></i>
+        </a>
+    </div>
+
+    <!-- Load scripts at end of body -->
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+
